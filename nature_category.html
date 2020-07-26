@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nature category</title>
+    <link rel="stylesheet" href="nature.css">
+</head>
+<body class="nature_body">
+    <section class="zoom">
+        <img src="mountain1.png" id="layer1">
+        <img src="mountain2.png" id="layer2">
+        <img src="text.png" id="text">
+    </section>
+<section class="content_mount">
+    <h2 id= "nature">קטגורית הצופן</h2>
+    <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+         graphic or web designs. The passage is attributed to an unknown typesetter in the 15th cent
+        have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. 
+        It usually begins withLorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+        graphic or web designs. The passage is attributed to an unknown typesetter in the 15th cent
+       have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. 
+       It usually begins withLorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+       graphic or web designs. The passage is attributed to an unknown typesetter in the 15th cent
+      have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. 
+      It usually begins with:rem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+      graphic or web designs. The passage is attributed to an unknown typesetter in the 15th cent
+     have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. 
+     It usually begins withLorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+     graphic or web designs. The passage is attributed to an unknown typesetter in the 15th cent
+    have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. 
+    It usually begins withLorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
+    graphic or web designs. The passage is attributed to an unknown typesetter in the 15th cent
+   have scrambled parts o</p>
+</section> 
+<script type="text/javascript">
+let layer1 = document.getElementById('layer1')  ;   
+scroll = window.pageYOffset;
+document.addEventListener('scroll',function(e){
+    let offset = window.pageYOffset;
+    scroll = offset;
+    layer1.style.width = (100 + scroll/5) + '%';
+});
+
+let layer2 = document.getElementById('layer2')  ;   
+scroll = window.pageYOffset;
+document.addEventListener('scroll',function(e){
+    let offset = window.pageYOffset;
+    scroll = offset;
+    layer2.style.width = (100 + scroll/5) + '%';
+    layer2.style.left = scroll / 50 + '%';
+});
+
+let text = document.getElementById('text')  ;   
+scroll = window.pageYOffset;
+document.addEventListener('scroll',function(e){
+    let offset = window.pageYOffset;
+    scroll = offset;
+    layer2.style.width = (100 + scroll/5) + '%';
+    text.style.left = - scroll / 20 + '%';
+}); 
+
+</script>   
+</body>
+</html>
