@@ -47,7 +47,7 @@ img{
   height: 215px;
   background-color: #fff;
   padding: 20px 15px;
-  flex-direction: column;
+  
   box-shadow: 0 5px 202px rgba(0,0,0,0.5);
   transition: 0.3s ease-in-out;
 }

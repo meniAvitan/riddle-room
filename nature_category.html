@@ -6,14 +6,24 @@
     <title>nature category</title>
     <link rel="stylesheet" href="nature.css">
 </head>
-<body class="nature_body">
+<body dir="rtl" class="nature_body">
     <section class="zoom">
         <img src="mountain1.png" id="layer1">
         <img src="mountain2.png" id="layer2">
-        <img src="text.png" id="text">
+        <div id="text">the<br/> nature</div>
     </section>
 <section class="content_mount">
-    <h2 id= "nature">קטגורית הצופן</h2>
+    <h1 id= "nature">ברוכים הבאים לעולם הטבע</h1>
+    <div class="instruction">
+        <button>הוראות לעולם הטבע</button>
+        <p>! קראו את ההוראות היטב</p>
+        <h3 class="q_info1">שימוש בטרנספומטר הוא במספרים שמומרים לאותיות עד 22</h3><br/>
+        <h3 class="q_info2">שימוש במקלדת הוא ע"י עמידה בקרבת חיישני המרחק - שימו לב לקוי הסימון בריצפה</h3><br/>
+        <h3 class="q_info3">זמן עניית התשובה הינו גורם לשקלול הציון</h3>
+        <h3 class="q_info4">what is you name?</h3>
+        
+    
+    </div>
     <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
          graphic or web designs. The passage is attributed to an unknown typesetter in the 15th cent
         have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. 
@@ -36,7 +46,7 @@
 <script type="text/javascript">
 let layer1 = document.getElementById('layer1')  ;   
 scroll = window.pageYOffset;
-document.addEventListener('scroll',function(e){
+document.addEventListener('scroll', function(e){
     let offset = window.pageYOffset;
     scroll = offset;
     layer1.style.width = (100 + scroll/5) + '%';
@@ -44,21 +54,49 @@ document.addEventListener('scroll',function(e){
 
 let layer2 = document.getElementById('layer2')  ;   
 scroll = window.pageYOffset;
-document.addEventListener('scroll',function(e){
+document.addEventListener('scroll', function(e){
     let offset = window.pageYOffset;
     scroll = offset;
     layer2.style.width = (100 + scroll/5) + '%';
-    layer2.style.left = scroll / 50 + '%';
+    layer2.style.left =  scroll/50 + '%';
 });
 
-let text = document.getElementById('text')  ;   
+let text1 = document.getElementById('text')  ;   
 scroll = window.pageYOffset;
 document.addEventListener('scroll',function(e){
     let offset = window.pageYOffset;
     scroll = offset;
     layer2.style.width = (100 + scroll/5) + '%';
-    text.style.left = - scroll / 20 + '%';
+    text.style.top = - scroll/20 + '%';
 }); 
+
+const text_info = document.querySelector('.q_info3 ');
+const strText = text_info.textContent;
+console.log(strText);
+const splitText = strText.split(" ");
+text_info.textContent=" ";
+
+for(let i=0; i<splitText.length; i++){
+    text_info.innerHTML += "<span>" + splitText[i] + "</span>" + " ";
+}
+
+let char = 0;
+let timer = setInterval(onTick, 50);
+
+function onTick(){
+    const span = text_info.querySelectorAll('span')[char];
+    span.classList.add('fade');
+    char++
+    if(char === splitText.length){
+        complete();
+        return;
+    }
+}
+function complete(){
+    clearInterval(timer);
+    timer = null;
+}
+
 
 </script>   
 </body>
