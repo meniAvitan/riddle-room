@@ -12,65 +12,73 @@
         <img src="mountain2.png" id="layer2">
         <div id="text">the<br/> nature</div>
     </section>
-<section class="content_mount">
-    <h1 id= "nature">ברוכים הבאים לעולם הטבע</h1>
-    <div class="instruction">
-        <button>הוראות לעולם הטבע</button>
-        <p>! קראו את ההוראות היטב</p>
-        <h3 class="q_info1">שימוש בטרנספומטר הוא במספרים שמומרים לאותיות עד 22</h3><br/>
-        <h3 class="q_info2">שימוש במקלדת הוא ע"י עמידה בקרבת חיישני המרחק - שימו לב לקוי הסימון בריצפה</h3><br/>
-        <h3 class="q_info3">זמן עניית התשובה הינו גורם לשקלול הציון</h3>
-        <h3 class="q_info4">what is you name?</h3>
+
+    <h1 class= "nature_titl">ברוכים הבאים לעולם הטבע</h1>
+    <h2 class= "nature_titl_2">חושבים שאתם מכירים את עולם הטבע? <br/>נראה אתכם...</h2>
+       
+        <details>
+            <summary id="btn_instruction">הוראות המשחק</summary>
         
+            <h3 class="instruction"> קראו את ההוראות היטב!!! </h3>  
+            <li class="instruction"> שימוש בטרנספומטר הוא במספרים שמומרים לאותיות עד 22.</li>
+            <li class="instruction">  שימוש במקלדת הוא על ידי עמידה בקרבת חיישני המרחק - שימו לב לקוי הסימון בריצפה.</li>
+            <li class="instruction">  זמן עניית התשובה הינו גורם לשקלול הציון.</li>
     
-    </div>
-    <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
-         graphic or web designs. The passage is attributed to an unknown typesetter in the 15th cent
-        have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. 
-        It usually begins withLorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
-        graphic or web designs. The passage is attributed to an unknown typesetter in the 15th cent
-       have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. 
-       It usually begins withLorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
-       graphic or web designs. The passage is attributed to an unknown typesetter in the 15th cent
-      have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. 
-      It usually begins with:rem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
-      graphic or web designs. The passage is attributed to an unknown typesetter in the 15th cent
-     have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. 
-     It usually begins withLorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
-     graphic or web designs. The passage is attributed to an unknown typesetter in the 15th cent
-    have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. 
-    It usually begins withLorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
-    graphic or web designs. The passage is attributed to an unknown typesetter in the 15th cent
-   have scrambled parts o</p>
-</section> 
+        </details>
+    <div class="nature_parallex"></div>
+   
+    <div class="q1"><a class="q1-q" href="q1-nature.html">מוכנים???</a></div>
+
+    <footer>
+        
+        <h4 id="credit">create by MENI-WEBIX</h4>
+   
+    </footer>
+         
 <script type="text/javascript">
-let layer1 = document.getElementById('layer1')  ;   
-scroll = window.pageYOffset;
+ 
+
 document.addEventListener('scroll', function(e){
+    let layer1 = document.getElementById('layer1');
+    let layer2 = document.getElementById('layer2');  
+    let text = document.getElementById('text');  
+    scroll = window.pageYOffset;
     let offset = window.pageYOffset;
     scroll = offset;
     layer1.style.width = (100 + scroll/5) + '%';
-});
-
-let layer2 = document.getElementById('layer2')  ;   
-scroll = window.pageYOffset;
-document.addEventListener('scroll', function(e){
-    let offset = window.pageYOffset;
-    scroll = offset;
-    layer2.style.width = (100 + scroll/5) + '%';
-    layer2.style.left =  scroll/50 + '%';
-});
-
-let text1 = document.getElementById('text')  ;   
-scroll = window.pageYOffset;
-document.addEventListener('scroll',function(e){
-    let offset = window.pageYOffset;
-    scroll = offset;
+    layer1.style.width = (100 + scroll/5) + '%';
+    layer2.style.top =  scroll/20 + '%'; 
     layer2.style.width = (100 + scroll/5) + '%';
     text.style.top = - scroll/20 + '%';
-}); 
+});
 
-const text_info = document.querySelector('.q_info3 ');
+   
+// scroll = window.pageYOffset;
+// document.addEventListener('scroll', function(e){
+//     let offset = window.pageYOffset;
+//     scroll = offset;
+//     layer2.style.left = (100 + scroll/5) + '%';
+//     layer2.style.left =  scroll/50 + '%';
+
+// });
+
+ 
+// scroll = window.pageYOffset;
+// document.addEventListener('scroll',function(e){
+//     let offset = window.pageYOffset;
+//     scroll = offset;
+   
+    
+// }); 
+
+
+
+
+
+
+
+
+const text_info = document.querySelector('.q_info');
 const strText = text_info.textContent;
 console.log(strText);
 const splitText = strText.split(" ");
@@ -78,6 +86,7 @@ text_info.textContent=" ";
 
 for(let i=0; i<splitText.length; i++){
     text_info.innerHTML += "<span>" + splitText[i] + "</span>" + " ";
+    
 }
 
 let char = 0;
