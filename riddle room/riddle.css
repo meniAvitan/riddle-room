@@ -1,0 +1,90 @@
+html{
+    margin: 0px;
+}
+
+
+.container{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    background: lightgray;
+}
+.parallex{
+    background: url("https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+}
+p{
+    padding: 30px;
+}
+.titel{
+    font-size: 50px;
+    height: 150px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+}
+
+
+
+
+/* html{
+    height: 100%;
+    overflow: hidden;
+}
+body{
+    
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-style: "Luna";
+}
+header{
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 30vw 0 5vw;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+}
+header h1{
+    margin-top: -100px;
+}
+header, header:before{
+    background: 50% 50% / cover;
+}
+header::before{
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background-image: url("https://image.shutterstock.com/image-photo/beautiful-sea-hd-wallpaper-600w-1146621794.jpg");
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height:100vh ;
+
+}
+header * {
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin: 0;
+    padding: 1em 0;
+}
+.a{
+    height: 1500px;
+    background:gray;
+
+} */

@@ -1,0 +1,7 @@
+{
+   "question":"?איזה מן מהפרחים הבאים אינו נחשב צמח מוגן בישראל",
+    "ans1":"https://images.pexels.com/photos/2343170/pexels-photo-2343170.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "ans2":"https://images.pexels.com/photos/2480072/pexels-photo-2480072.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "ans3":"https://images.pexels.com/photos/1104365/pexels-photo-1104365.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "ans4":"https://images.pexels.com/photos/1046348/pexels-photo-1046348.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+}

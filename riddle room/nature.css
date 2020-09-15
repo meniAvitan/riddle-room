@@ -1,0 +1,143 @@
+.nature_body{
+    margin: 0;
+    padding: 0;
+   
+  
+}
+.zoom{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+ 
+     height: 1000px;
+     background: url(bg.jpg);
+     background-size: cover;
+}
+.zoom:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 1000;
+    background: linear-gradient(transparent, #fff);
+}
+.zoom #layer1{
+    content: '';
+    position: absolute;
+  
+    width: 100%;
+    left: 40%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+.zoom #layer2{
+    position: absolute;
+  
+  
+    right: 0%;
+    z-index: 9;
+    
+}
+.zoom #text{
+    position: absolute;
+    width: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 300px; 
+    text-align: center;
+    margin-top: 400px;
+    line-height: 80%;
+    color: #fff;
+    transform: translateY(50%);
+
+}
+.content_mount{
+   
+    padding: 100px;
+    box-sizing: border-box;
+    font-family: consolas;
+
+}
+.content_mount h2{
+    margin: 0;
+    padding: 0;
+    font-size: 4em;
+}
+.content_mount p{
+    font-size: 1.2em;
+}
+
+/* הוראות לעניית החידון */
+#btn_instruction, .q1{
+    text-align: center;
+    color: white;
+    background: linear-gradient(to bottom, blue, lightblue);
+    font-size: 20px;
+    margin-left: 40%;
+    margin-right: 40%;
+    width: 20%; 
+    height: 50px;
+    padding-top: 20px;
+    margin-bottom: 5%;
+ 
+}
+
+.q1-q{
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+   
+}
+details {
+    padding: 30px;
+    
+}
+.instruction{
+    font-size: 25px;
+    font-family: sans-serif;
+    text-align: right; 
+    line-height: 200%;
+    
+}
+.nature_titl{
+    text-align: center;
+    font-size: 70px;
+    font-family: sans-serif;
+}
+.nature_titl_2{
+    text-align: center;
+    font-size: 50px;
+    font-family: sans-serif;
+}
+.nature_parallex{
+    background: url("https://images.pexels.com/photos/371589/pexels-photo-371589.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 60px;
+}
+
+
+span{
+    opacity: 0;
+    transition: all 0.4s ease;
+    transform: translateY(50px);
+    display: inline-block;
+}
+span.fade {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+footer {
+    background-color: rgba(59, 56, 56, 0.596);
+    text-align: center;
+    height: 100px;
+}
+#credit{
+    text-align: center;
+   padding-top: 2%;
+    
+
+}

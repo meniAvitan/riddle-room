@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nature category</title>
+    <link rel="stylesheet" href="nature.css">
+</head>
+<body dir="rtl" class="nature_body">
+    <section class="zoom">
+        <img src="mountain1.png" id="layer1">
+        <img src="mountain2.png" id="layer2">
+        <div id="text">the<br/> nature</div>
+    </section>
+
+    <h1 class= "nature_titl">ברוכים הבאים לעולם הטבע</h1>
+    <h2 class= "nature_titl_2">חושבים שאתם מכירים את עולם הטבע? <br/>נראה אתכם...</h2>
+       
+        <details>
+            <summary id="btn_instruction">הוראות המשחק</summary>
+        
+            <h3 class="instruction"> קראו את ההוראות היטב!!! </h3>  
+            <li class="instruction"> שימוש בטרנספומטר הוא במספרים שמומרים לאותיות עד 22.</li>
+            <li class="instruction">  שימוש במקלדת הוא על ידי עמידה בקרבת חיישני המרחק - שימו לב לקוי הסימון בריצפה.</li>
+            <li class="instruction">  זמן עניית התשובה הינו גורם לשקלול הציון.</li>
+    
+        </details>
+    <div class="nature_parallex"></div>
+   
+    <div class="q1"><a class="q1-q" href="q1-nature.html">מוכנים???</a></div>
+
+    <footer>
+        
+        <h4 id="credit">create by MENI-WEBIX</h4>
+   
+    </footer>
+         
+<script type="text/javascript">
+ 
+
+document.addEventListener('scroll', function(e){
+    let layer1 = document.getElementById('layer1');
+    let layer2 = document.getElementById('layer2');  
+    let text = document.getElementById('text');  
+    scroll = window.pageYOffset;
+    let offset = window.pageYOffset;
+    scroll = offset;
+    layer1.style.width = (100 + scroll/5) + '%';
+    layer1.style.width = (100 + scroll/5) + '%';
+    layer2.style.top =  scroll/20 + '%'; 
+    layer2.style.width = (100 + scroll/5) + '%';
+    text.style.top = - scroll/20 + '%';
+});
+
+   
+// scroll = window.pageYOffset;
+// document.addEventListener('scroll', function(e){
+//     let offset = window.pageYOffset;
+//     scroll = offset;
+//     layer2.style.left = (100 + scroll/5) + '%';
+//     layer2.style.left =  scroll/50 + '%';
+
+// });
+
+ 
+// scroll = window.pageYOffset;
+// document.addEventListener('scroll',function(e){
+//     let offset = window.pageYOffset;
+//     scroll = offset;
+   
+    
+// }); 
+
+
+
+
+
+
+
+
+const text_info = document.querySelector('.q_info');
+const strText = text_info.textContent;
+console.log(strText);
+const splitText = strText.split(" ");
+text_info.textContent=" ";
+
+for(let i=0; i<splitText.length; i++){
+    text_info.innerHTML += "<span>" + splitText[i] + "</span>" + " ";
+    
+}
+
+let char = 0;
+let timer = setInterval(onTick, 50);
+
+function onTick(){
+    const span = text_info.querySelectorAll('span')[char];
+    span.classList.add('fade');
+    char++
+    if(char === splitText.length){
+        complete();
+        return;
+    }
+}
+function complete(){
+    clearInterval(timer);
+    timer = null;
+}
+
+
+</script>   
+</body>
+</html>
